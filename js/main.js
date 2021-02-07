@@ -8,6 +8,7 @@ const start = Date.now()
 const g = 9.8
 const x0 = canvas.width / 2
 const y0 = 50
+const scale = 50
 
 var pendulums = []
 
@@ -42,7 +43,7 @@ class Pendulum {
         let x = this.get_x(t)
         let y = this.get_y(x)
         // console.log(t, x, y)
-        ctx.lineTo(x * 50 + x0, y * 50 + y0)
+        ctx.lineTo(x * scale + x0, y * scale + y0)
         ctx.stroke()
     }
 

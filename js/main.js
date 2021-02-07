@@ -56,6 +56,10 @@ class Pendulum {
         })
     }
 
+    static clear() {
+        pendulums = []
+    }
+
     static create(length = 1, amplitude = 0, initial_state = 0, color = 'black', width = 1) {
         pendulums.push(new Pendulum(length, amplitude, initial_state, color, width))
     }

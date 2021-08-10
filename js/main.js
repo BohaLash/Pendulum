@@ -32,8 +32,7 @@ class Pendulum {
     }
 
     get_y(x) {
-        let l = this.l
-        return Math.sqrt(l * l - x * x)
+        return Math.sqrt(this.l * this.l - x * x)
     }
 
     async render() {
@@ -42,7 +41,6 @@ class Pendulum {
         let t = get_t(this.t)
         let x = this.get_x(t)
         let y = this.get_y(x)
-        // console.log(t, x, y)
         ctx.lineTo(x * scale + x0, y * scale + y0)
         ctx.stroke()
     }
@@ -76,9 +74,8 @@ class Pendulum {
     }
 }
 
-var interval = setInterval(() => Pendulum.drawAll(), 0);
+const interval = setInterval(() => Pendulum.drawAll(), 0);
 
 Pendulum.create_seria(10, 5, (i) => i * 0.2, (i) => {
-    let colors = ['red', 'orange', 'yelow', 'green', 'blue', 'purpure', 'black']
-    return colors[i % 7]
+    return ['red', 'orange', 'yelow', 'green', 'blue', 'purpure', 'black'][i % 7]
 })

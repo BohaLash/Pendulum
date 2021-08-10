@@ -76,6 +76,5 @@ class Pendulum {
 
 const interval = setInterval(() => Pendulum.drawAll(), 0);
 
-Pendulum.create_seria(10, 5, (i) => i * 0.2, (i) => {
-    return ['red', 'orange', 'yelow', 'green', 'blue', 'purpure', 'black'][i % 7]
-})
+Pendulum.create_seria(10, 5, (i) => i * 0.2,
+    (i) => ['red', 'orange', 'yelow', 'green', 'blue', 'purpure', 'black'][i % 7])
